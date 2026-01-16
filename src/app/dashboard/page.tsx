@@ -45,10 +45,10 @@ export default function Dashboard() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`px-6 py-3 font-medium transition-all border-b-2 -mb-[2px] ${
+                className={`px-6 py-3 font-medium transition-all border-b-2 mb-px ${
                   activeTab === tab.id
-                    ? 'border-cyan-400 text-cyan-400 bg-cyan-400/5'
-                    : 'border-transparent text-gray-400 hover:text-gray-300 hover:bg-blue-500/5'
+                    ? 'border-cyan-400 text-cyan-400 bg-cyan-400/10'
+                    : 'border-transparent text-gray-400 hover:text-gray-300 hover:bg-blue-500/10'
                 }`}
               >
                 {tab.label}

@@ -7,7 +7,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      opacity: {
+        '5': '0.05',
+        '10': '0.1',
+        '30': '0.3',
+        '50': '0.5',
+      },
+    },
   },
   plugins: [],
 }
