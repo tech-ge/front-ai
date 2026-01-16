@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+
 interface SearchResult {
   title: string;
   url: string;
@@ -30,7 +32,7 @@ export default function SearchPanel({ onResults, onAnalysis }: SearchPanelProps)
 
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/search/unified', {
+      const response = await fetch(`${API_URL}/api/search/unified`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -45,7 +47,7 @@ export default function SearchPanel({ onResults, onAnalysis }: SearchPanelProps)
       onResults?.(searchResults);
     } catch (error) {
       console.error('Search failed:', error);
-      alert('Search failed. Make sure backend is running on http://localhost:8000');
+      alert(`Search failed. Make sure backend is running on ${API_URL}`);
     } finally {
       setLoading(false);
     }
@@ -56,7 +58,7 @@ export default function SearchPanel({ onResults, onAnalysis }: SearchPanelProps)
     
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:8000/api/analysis/synthesize', {
+      const response = await fetch(`${API_URL}/api/analysis/synthesize`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -69,7 +71,7 @@ export default function SearchPanel({ onResults, onAnalysis }: SearchPanelProps)
       onAnalysis?.(data);
     } catch (error) {
       console.error('Analysis failed:', error);
-      alert('Analysis failed');
+      alert('Analysis failed. Check network tab for details.');
     } finally {
       setLoading(false);
     }
