@@ -9,7 +9,7 @@ interface VaultDocument {
   encrypted: boolean;
   created_at: string;
   tags: string[];
-}
+} 
 
 export default function VaultPanel() {
   const [documents, setDocuments] = useState<VaultDocument[]>([]);
