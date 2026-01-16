@@ -10,7 +10,7 @@ export default function Dashboard() {
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [analysis, setAnalysis] = useState(null);
 
-  return (
+  return ( 
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-black text-white">
       {/* Animated background */}
       <div className="fixed top-0 left-0 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl animate-pulse pointer-events-none animate-delay-2s"></div>
