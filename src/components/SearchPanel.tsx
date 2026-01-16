@@ -103,8 +103,8 @@ export default function SearchPanel({ onResults, onAnalysis }: SearchPanelProps)
               onClick={() => setSelectedSource(source)}
               className={`px-3 py-1 text-xs rounded border transition ${
                 selectedSource === source
-                  ? 'bg-cyan-600/50 border-cyan-400'
-                  : 'bg-blue-600/30 hover:bg-blue-600/50 border-blue-500/50'
+                  ? 'bg-cyan-600 border-cyan-400'
+                  : 'bg-blue-600 hover:bg-blue-500 border-blue-500'
               }`}
             >
               {source === 'all' ? '📚 All' : source === 'academic' ? '🎓 Academic' : source === 'news' ? '📰 News' : '🌐 Web'}
