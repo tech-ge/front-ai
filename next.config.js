@@ -1,14 +1,23 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  compress: false,
+  productionBrowserSourceMaps: false,
+  minify: false,
+  optimizeFonts: false,
+  poweredByHeader: false,
   swcMinify: false,
-  webpack: (config) => {
-    config.optimization.minimize = false
+  webpack: (config, { dev, isServer }) => {
+    if (!dev) {
+      config.optimization = {
+        ...config.optimization,
+        minimize: false,
+        splitChunks: {
+          chunks: 'all',
+        },
+      }
+    }
     return config
-  },
-  onDemandEntries: {
-    maxInactiveAge: 60 * 1000,
-    pagesBufferLength: 5,
   },
 }
 
