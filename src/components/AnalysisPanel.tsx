@@ -6,7 +6,7 @@ interface AnalysisData {
   potential_gaps: string[];
   next_research_directions: string[];
   bias_analysis?: string;
-  sources_cited: string[];
+  sources_cited: string[]; 
 }
 
 interface AnalysisPanelProps {
