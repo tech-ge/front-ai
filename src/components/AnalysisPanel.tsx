@@ -8,7 +8,7 @@ interface AnalysisData {
   bias_analysis?: string;
   sources_cited: string[]; 
 }
-
+ 
 interface AnalysisPanelProps {
   data: AnalysisData;
 }
