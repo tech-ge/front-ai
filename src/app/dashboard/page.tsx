@@ -6,7 +6,7 @@ import AnalysisPanel from '@/components/AnalysisPanel';
 import VaultPanel from '@/components/VaultPanel';
 
 export default function Dashboard() {
-  const [activeTab, setActiveTab] = useState('search');
+  const [activeTab, setActiveTab] = useState('search'); 
   const [searchResults, setSearchResults] = useState<any[]>([]);
   const [analysis, setAnalysis] = useState(null);
 
