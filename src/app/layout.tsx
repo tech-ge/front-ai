@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: 'OmniMind - AI Research Intelligence',
   description: 'AI-powered research and knowledge management platform',
 }
-
+ 
 export default function RootLayout({
   children,
 }: {
