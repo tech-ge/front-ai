@@ -9,7 +9,7 @@ interface SearchResult {
   url: string;
   source: string;
   snippet: string;
-  relevance_score: number;
+  relevance_score: number; 
   published_date?: string;
   author?: string; 
   citations?: number;
