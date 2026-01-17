@@ -10,7 +10,7 @@ interface VaultDocument {
   created_at: string;
   tags: string[];
 } 
-
+ 
 export default function VaultPanel() {
   const [documents, setDocuments] = useState<VaultDocument[]>([]);
   const [showUpload, setShowUpload] = useState(false);
